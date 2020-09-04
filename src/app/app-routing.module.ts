@@ -16,7 +16,7 @@ const routes: Routes = [
     component: ContactComponent,
   },
   {
-    path: "projects/:id",
+    path: "projects/:id", /* debe ser projects/:id porque queremos que lo que vaya despues de la barra sea variable y se consigue con ":" */
     component: ViewProjectComponent,
   },
 
