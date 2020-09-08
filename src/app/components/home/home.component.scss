@@ -1,0 +1,13 @@
+.home {
+    height: 100%;
+    overflow: scroll;
+    .secciones {
+        /* Take full size */
+        height: 100%;
+        width: 100%;
+
+        /* Stick to the top */
+        position: sticky;
+        top: 0;
+    }
+}
