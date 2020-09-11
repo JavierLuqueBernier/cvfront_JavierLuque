@@ -1,11 +1,14 @@
-.list-project {
+.list-projects {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -8px;
-    margin-right: -8px;
+    padding: 0 1%;
     .proyecto {
-        flex-basis: 25%;
+        flex-basis: 23%;
         padding-left: 8px;
         padding-right: 8px;
+        height: 100px;
+        background-color: tomato;
+        margin: 1%;
     }
 }
+
