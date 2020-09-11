@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Project } from '../../models/project';
 import { Project } from '../models/project';
 
 @Injectable({
@@ -7,9 +6,9 @@ import { Project } from '../models/project';
 })
 export class ProjectsService {
   arrProyectos: Project[]; /* Este array de proyectos lo consultaremos con lo que nos traigamos del back */
-  constructor() { 
+  constructor() {
 
-    this.arrProyectos = new Array(
+    this.arrProyectos = [
       {
         nombre: 'JavierLuqueBernier',
         descripcion: 'Esto es un curriculum',
@@ -21,7 +20,7 @@ export class ProjectsService {
         categoria: 'web',
         tecnologias: 'de todo un poco',
       }
-    );
+    ];
   }
 
   getProjects() {
