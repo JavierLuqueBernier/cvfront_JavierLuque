@@ -18,5 +18,4 @@ export class ListProjectsComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.arrProyectos);
   }
-
 }
