@@ -22,8 +22,9 @@ export class ProjectsService {
         tecnologias: 'de todo un poco',
       }
     );
+  }
 
-
-
+  getProjects() {
+    return this.arrProyectos;
   }
 }
