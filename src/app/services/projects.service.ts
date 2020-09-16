@@ -7,21 +7,9 @@ import { Project } from '../models/project';
 })
 export class ProjectsService {
   arrProyectos: Project[]; /* Este array de proyectos lo consultaremos con lo que nos traigamos del back */
-  constructor(private httpClient: HttpClient) {
-
-    this.arrProyectos = [
-      {
-        nombre: 'JavierLuqueBernier',
-        descripcion: 'Esto es un curriculum',
-        imagenes: [],
-        url: 'https://twitter.com/Sr_kelevra',
-        ano: 2015,
-        cliente: 'Yo mismo',
-        urlClient: 'https://twitter.com/Sr_kelevra',
-        categoria: 'web',
-        tecnologias: 'de todo un poco',
-      }
-    ];
+  baseUrl: string;
+  constructor(private httpClient: HttpClient) { /* HttpClient nos servira para poder hacer las peticiones */
+    this.baseUrl = 'https://cvback-javierluque.herokuapp.com/api/proyectos';
   }
 
   getProjects() {
