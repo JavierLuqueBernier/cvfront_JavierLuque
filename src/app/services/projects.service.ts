@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Project } from '../models/project';
 
@@ -6,7 +7,7 @@ import { Project } from '../models/project';
 })
 export class ProjectsService {
   arrProyectos: Project[]; /* Este array de proyectos lo consultaremos con lo que nos traigamos del back */
-  constructor() {
+  constructor(private httpClient: HttpClient) {
 
     this.arrProyectos = [
       {
