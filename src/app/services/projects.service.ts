@@ -11,15 +11,15 @@ export class ProjectsService {
   baseUrl: string;
   constructor(private httpClient: HttpClient) { /* HttpClient nos servira para poder hacer las peticiones */
     this.baseUrl = 'https://cvback-javierluque.herokuapp.com/api/proyectos';
+    this.getToken();
   }
 
   getToken(): void {
     let objetoToken: any;
-    this.httpClient.get('https://cvback-javierluque.herokuapp.com/api/token').subscribe( valor => {
+    this.httpClient.get('https://cvback-javierluque.herokuapp.com/api/token')/* esto es un observable */.subscribe( valor => {
       objetoToken = valor;
       console.log(objetoToken);
     });
-    /* esto es un observable, asique hay que subscribirse */
   }
 
   getProjects() {
