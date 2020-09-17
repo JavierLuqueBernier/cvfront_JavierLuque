@@ -29,5 +29,13 @@ export class ListProjectsComponent implements OnInit {
     console.log(this.arrCategorias);
   }
 
+  async cargarCategoria(pCategoria = '') {
+    if (pCategoria !== '') {
+      this.arrProyectos = await this.projectServices.getProjectsByCategory(pCategoria);
+    } else {
+      this.arrProyectos = await this.projectServices.getAllProjects();
+    }
+  }
+
 
 }
