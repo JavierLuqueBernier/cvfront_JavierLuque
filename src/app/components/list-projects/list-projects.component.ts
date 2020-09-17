@@ -11,11 +11,16 @@ export class ListProjectsComponent implements OnInit {
 
   arrProyectos: Project[];
 
-  constructor(private ProjectService: ProjectsService) {
-    this.arrProyectos = this.ProjectService.getProjects(); /* Aqui llamamos a la funcion del servicio y me traigo el array */
+  constructor(private projectServices: ProjectsService) {
+     /* Aqui llamamos a la funcion del servicio y me traigo el array */
    }
 
   ngOnInit(): void {
+
+  }
+
+  async obtenerProyectos() {
+    this.arrProyectos = await this.projectServices.getAllProjects();
     console.log(this.arrProyectos);
   }
 }
