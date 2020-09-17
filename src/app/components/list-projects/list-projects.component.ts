@@ -23,10 +23,10 @@ export class ListProjectsComponent implements OnInit {
   async obtenerProyectos() {
     this.arrProyectos = await this.projectServices.getAllProjects();
     console.log(this.arrProyectos);
-    this.arrCategorias = this.arrProyectos.map(proyecto => {
+    const arrayString = this.arrProyectos.map(proyecto => {
       return proyecto.categoria;
     });
-    console.log(this.arrCategorias);
+    this.arrCategorias = new Set(arrayString);
   }
 
 
