@@ -1,6 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { observable } from 'rxjs';
 import { Project } from '../models/project';
 
 @Injectable({
@@ -19,6 +18,7 @@ export class ProjectsService {
     this.httpClient.get('https://cvback-javierluque.herokuapp.com/api/token')/* esto es un observable */.subscribe( valor => {
       objetoToken = valor;
       console.log(objetoToken);
+      localStorage.setItem('token', objetoToken.token);
     });
   }
 
