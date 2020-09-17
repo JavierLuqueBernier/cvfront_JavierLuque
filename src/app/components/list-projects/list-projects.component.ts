@@ -10,6 +10,7 @@ import { ProjectsService } from '../../services/projects.service';
 export class ListProjectsComponent implements OnInit {
 
   arrProyectos: Project[];
+  arrCategorias: string[];
 
   constructor(private projectServices: ProjectsService) {
      /* Aqui llamamos a la funcion del servicio y me traigo el array */
