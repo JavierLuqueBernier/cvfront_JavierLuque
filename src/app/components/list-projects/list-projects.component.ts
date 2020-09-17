@@ -26,7 +26,8 @@ export class ListProjectsComponent implements OnInit {
     const arrayString = this.arrProyectos.map(proyecto => {
       return proyecto.categoria;
     });
-    this.arrCategorias = new Set(arrayString);
+    this.arrCategorias = Array.from(new Set(arrayString));
+    console.log(this.arrCategorias);
   }
 
 
