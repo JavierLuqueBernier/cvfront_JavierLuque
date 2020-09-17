@@ -21,6 +21,6 @@ export class ListProjectsComponent implements OnInit {
 
   async obtenerProyectos() {
     this.arrProyectos = await this.projectServices.getAllProjects();
-    console.log(this.arrProyectos);
+    /* console.log(this.arrProyectos); */
   }
 }
