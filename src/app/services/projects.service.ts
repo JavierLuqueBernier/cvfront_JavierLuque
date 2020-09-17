@@ -23,6 +23,11 @@ export class ProjectsService {
   }
 
   getAllProjects()/* getAllProject nos devuelve una promesa que gestionaremos en el componente> */: Promise<Project[]> {
-    return this.httpClient.get<Project[]>(this.baseUrl)/* esto es un observable y debemos cambiarlo a promesa */.toPromise();
+    const hhtpOptions = {
+      headers: new HttpHeaders({
+        'access-token': localStorage.getItem('token'),
+      })
+    };
+    return this.httpClient.get<Project[]>(this.baseUrl, hhtpOptions)/* esto es un observable y debemos cambiarlo a promesa */.toPromise();
   }
 }
