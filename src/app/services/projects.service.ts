@@ -22,7 +22,7 @@ export class ProjectsService {
     });
   }
 
-  getProjects() {
-    return this.arrProyectos;
+  getAllProjects()/* getAllProject nos devuelve una promesa que gestionaremos en el componente> */: Promise<Project[]> {
+    return this.httpClient.get<Project[]>(this.baseUrl)/* esto es un observable y debemos cambiarlo a promesa */.toPromise();
   }
 }
