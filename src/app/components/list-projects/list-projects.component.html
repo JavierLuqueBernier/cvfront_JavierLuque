@@ -1,3 +1,9 @@
+<div class="filtros">
+    <ul>
+        <li (click)="cargarCategoria()">Todos</li>
+        <li (click)="cargarCategoria(categoria)" *ngFor="let categoria of arrCategorias">{{categoria}}</li>
+    </ul>
+</div>
 <div class="list-projects">
     <div class="proyecto" *ngFor="let proyecto of arrProyectos"> <!-- de este montamos el bucle -->
         <h2>{{proyecto.titulo}}</h2>
