@@ -13,8 +13,7 @@ export class ListProjectsComponent implements OnInit {
   arrCategorias: string[];
 
   constructor(private projectServices: ProjectsService) {
-     /* Aqui llamamos a la funcion del servicio y me traigo el array */
-   }
+  }
 
   ngOnInit(): void {
     this.obtenerProyectos();
