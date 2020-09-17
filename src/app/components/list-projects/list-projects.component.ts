@@ -16,7 +16,7 @@ export class ListProjectsComponent implements OnInit {
    }
 
   ngOnInit(): void {
-
+    this.obtenerProyectos();
   }
 
   async obtenerProyectos() {
