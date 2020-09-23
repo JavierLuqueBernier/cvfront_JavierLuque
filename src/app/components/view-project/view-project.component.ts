@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Project } from 'src/app/models/project';
 import { ProjectsService } from 'src/app/services/projects.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ProjectsService } from 'src/app/services/projects.service';
 })
 export class ViewProjectComponent implements OnInit {
 
-
+  proyecto: Project;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -17,8 +18,12 @@ export class ViewProjectComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
-      console.log(params);
+      this.obtenerProyectoId(params.id);
     });
+  }
+
+  async obtenerProyectoId(pId) {
+    this.proyecto = await this.projectService.getProjectById(pId);
   }
 
 }
