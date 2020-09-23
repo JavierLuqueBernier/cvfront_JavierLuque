@@ -13,7 +13,14 @@ export class ProjectsService {
     this.getToken();
   }
 
-
+  getOptions() {
+    const valores = {
+      headers: new HttpHeaders({
+        'access-token': localStorage.getItem('token'),
+      })
+    };
+    return valores;
+  }
 
   getToken(): void {
     let objetoToken: any;
@@ -25,28 +32,16 @@ export class ProjectsService {
   }
 
   getAllProjects()/* getAllProject nos devuelve una promesa que gestionaremos en el componente> */: Promise<Project[]> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'access-token': localStorage.getItem('token'),
-      })
-    };
+    const httpOptions = this.getOptions();
     return this.httpClient.get<Project[]>(this.baseUrl, httpOptions)/* esto es un observable y debemos cambiarlo a promesa */.toPromise();
   }
 
   getProjectsByCategory(pCategory: string): Promise<Project[]> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'access-token': localStorage.getItem('token'),
-      })
-    };
+    const httpOptions = this.getOptions();
     return this.httpClient.get<Project[]>(this.baseUrl + 'categoria/' + pCategory, httpOptions).toPromise();
   }
 
-  getProjectById(pId:number) {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'access-token': localStorage.getItem('token'),
-      })
-    };
+  getProjectById(pId: number) {
+    const httpOptions = this.getOptions();
   }
 }
