@@ -9,7 +9,7 @@ export class ProjectsService {
   arrProyectos: Project[]; /* Este array de proyectos lo consultaremos con lo que nos traigamos del back */
   baseUrl: string;
   constructor(private httpClient: HttpClient) { /* HttpClient nos servira para poder hacer las peticiones */
-    this.baseUrl = 'https://cvback-javierluque.herokuapp.com/api/proyectos';
+    this.baseUrl = 'https://cvback-javierluque.herokuapp.com/api/proyectos/';
     this.getToken();
   }
 
@@ -37,6 +37,6 @@ export class ProjectsService {
         'access-token': localStorage.getItem('token'),
       })
     };
-    return this.httpClient.get<Project[]>(this.baseUrl + '/' + pCategory, httpOptions).toPromise();
+    return this.httpClient.get<Project[]>(this.baseUrl + 'categoria/' + pCategory, httpOptions).toPromise();
   }
 }
