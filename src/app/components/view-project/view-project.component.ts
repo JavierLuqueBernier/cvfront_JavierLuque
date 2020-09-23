@@ -17,13 +17,13 @@ export class ViewProjectComponent implements OnInit {
     private projectService: ProjectsService) { }
 
   ngOnInit(): void {
-    /* this.activatedRoute.params.subscribe(params => {
+    this.activatedRoute.params.subscribe(params => {
       this.obtenerProyectoId(params.id);
-    }); */
+    });
   }
 
-  /* async obtenerProyectoId(pId) {
+  async obtenerProyectoId(pId) {
     this.proyecto = await this.projectService.getProjectById(pId);
-  } */
+  }
 
 }
