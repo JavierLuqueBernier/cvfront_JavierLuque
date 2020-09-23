@@ -13,6 +13,8 @@ export class ProjectsService {
     this.getToken();
   }
 
+
+
   getToken(): void {
     let objetoToken: any;
     this.httpClient.get('https://cvback-javierluque.herokuapp.com/api/token')/* esto es un observable */.subscribe( valor => {
@@ -38,5 +40,13 @@ export class ProjectsService {
       })
     };
     return this.httpClient.get<Project[]>(this.baseUrl + 'categoria/' + pCategory, httpOptions).toPromise();
+  }
+
+  getProjectById(pId:number) {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'access-token': localStorage.getItem('token'),
+      })
+    };
   }
 }
