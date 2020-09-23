@@ -9,11 +9,16 @@ import { ProjectsService } from 'src/app/services/projects.service';
 })
 export class ViewProjectComponent implements OnInit {
 
+
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private projectService: ProjectsService) { }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(params => {
+      console.log(params);
+    });
   }
 
 }
