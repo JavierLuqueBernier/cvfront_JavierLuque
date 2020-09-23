@@ -43,5 +43,6 @@ export class ProjectsService {
 
   getProjectById(pId: number) {
     const httpOptions = this.getOptions();
+    return this.httpClient.get<Project>(this.baseUrl + pId, httpOptions).toPromise();
   }
 }
