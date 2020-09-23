@@ -41,7 +41,7 @@ export class ProjectsService {
     return this.httpClient.get<Project[]>(this.baseUrl + 'categoria/' + pCategory, httpOptions).toPromise();
   }
 
-  getProjectById(pId: number) {
+  getProjectById(pId: number): Promise<Project> {
     const httpOptions = this.getOptions();
     return this.httpClient.get<Project>(this.baseUrl + pId, httpOptions).toPromise();
   }
