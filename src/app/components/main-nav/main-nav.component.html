@@ -1,27 +1,21 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item href="#" routerLink="/">HOME</a>
-      <a mat-list-item href="#">SOBRE MI</a>
-      <a mat-list-item href="#">PROJECTOS</a>
-      <a mat-list-item routerLink="/contact">CONTACTO</a>
-    </mat-nav-list>
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <div class="logo">
+      <img src="" alt="">
+    </div>
+    <ul class="menu">
+      <li><a (click)="navigateTo($event)" [routerLink]="''">HOME</a></li>
+      <li><a (click)="navigateTo($event)" [routerLink]="''">SOBRE MI</a></li>
+      <li><a (click)="navigateTo($event)" [routerLink]="''">PROYECTOS</a></li>
+      <li><a [routerLink]="['/contact']">CONTACTO</a></li>
+    </ul>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+    <mat-toolbar>
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>CVFront</span>
     </mat-toolbar>
     <ng-content></ng-content>
   </mat-sidenav-content>
