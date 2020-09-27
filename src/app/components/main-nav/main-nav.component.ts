@@ -18,4 +18,8 @@ export class MainNavComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+  navigateTo($event) {
+    console.log($event.target.hash);
+  }
+
 }
