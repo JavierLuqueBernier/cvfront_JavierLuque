@@ -6,6 +6,10 @@
 </div>
 <div class="list-projects">
     <div class="proyecto" *ngFor="let proyecto of arrProyectos"> <!-- de este montamos el bucle -->
+        <div class="imagen">
+            <!-- <img [src]="'https://cvback-javierluque.herokuapp.com/images/b6c1104ff9cef9ba42a20c4ce88fa65b.jpeg'" alt=""> -->
+            <img src="../../../assets/images/business-1839876_1920.jpg" alt="">
+        </div>
         <h2>{{proyecto.titulo}}</h2>
         <a [routerLink]="['/projects', proyecto._id]">Ver detalle</a>
     </div>
