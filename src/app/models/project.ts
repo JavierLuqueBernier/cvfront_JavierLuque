@@ -7,5 +7,5 @@ export class Project {
     url: string;
     urlClient: string;
     ano: number;
-    imagenes: [];
+    imagen: string;
 }
