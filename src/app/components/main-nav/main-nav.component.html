@@ -5,9 +5,9 @@
       <img src="" alt="">
     </div>
     <ul class="menu">
-      <li><a (click)="navigateTo($event)" [routerLink]="''">HOME</a></li>
-      <li><a (click)="navigateTo($event)" [routerLink]="''">SOBRE MI</a></li>
-      <li><a (click)="navigateTo($event)" [routerLink]="''">PROYECTOS</a></li>
+      <li><a (click)="navigateTo($event)" [routerLink]="''" fragment="hero">HOME</a></li>
+      <li><a (click)="navigateTo($event)" [routerLink]="''" fragment="about">SOBRE MI</a></li>
+      <li><a (click)="navigateTo($event)" [routerLink]="''" fragment="proyectos">PROYECTOS</a></li>
       <li><a [routerLink]="['/contact']">CONTACTO</a></li>
     </ul>
   </mat-sidenav>
