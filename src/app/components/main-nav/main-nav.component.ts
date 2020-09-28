@@ -8,7 +8,7 @@ import { map, shareReplay } from 'rxjs/operators';
   templateUrl: './main-nav.component.html',
   styleUrls: ['./main-nav.component.scss']
 })
-export class MainNavComponent {
+export class MainNavComponent implements OnInit{
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
