@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -18,8 +18,15 @@ export class MainNavComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+  ngOnInit() {
+
+  }
+
   navigateTo($event) {
-    console.log($event.target.hash);
+    /* console.log($event.target.hash); */
+    const seccion = document.querySelector($event.target.hash);
+    console.log(seccion);
+    seccion.scrollIntoView({behavior: 'smooth' });
   }
 
 }
