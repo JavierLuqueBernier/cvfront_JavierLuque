@@ -3,6 +3,7 @@
   height: 100%;
   .sidenav {
     width: 200px;
+    background-color: rgb(63, 104, 105);
     .mat-toolbar {
       background: inherit;
     }
@@ -20,6 +21,7 @@
           padding: 20px 0px;
           text-decoration: none;
           font-size: 120%;
+          color: whitesmoke;
           font: {
             size: 120%;
             family: $font_primary;
