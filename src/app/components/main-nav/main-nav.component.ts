@@ -24,9 +24,8 @@ export class MainNavComponent {
 
   navigateTo($event) {
     /* console.log($event.target.hash); */
-    const seccion = document.querySelector($event.target.hash);
-    console.log(seccion);
-    seccion.scrollIntoView({behavior: 'smooth' });
+    const element = document.querySelector($event.target.hash);
+    element.scrollIntoView({behavior: 'smooth' });
   }
 
 }
