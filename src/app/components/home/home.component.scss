@@ -3,32 +3,25 @@
     height: 100%;
     overflow: scroll;
     .secciones {
-        /* Take full size */
         height: 100%;
         width: 100%;
-
-        /* Stick to the top */
         position: sticky;
         top: 0;
     }
     .hero {
         background-color: papayawhip;
         &>div {
-            /* Center the content */
             align-items: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
-
-            /* Take full size */
             height: 100vh;
             width: 100%;
-
-            /* Background */
             background-image: url("/assets/images/peter-gombos.jpg");
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
+            text-align: center;
             h2 {
                 font: {
                     size: 240%;
@@ -49,10 +42,53 @@
             }
         }
     }
-    .about {
-        background-color: lightgrey;
+    .about{
+        background-color: white;
+        padding: 40px;
+        .timeline{
+            position:relative;
+            height:  100vh;
+            
+            .line{
+                border-right: 2px solid #aaa;
+                left: 16px;
+                position: absolute;
+                top: 0px;
+                height: 100%;
+            }
+            .listitems{
+                    list-style-type: none;
+                    margin: 0px;
+                    padding: 0px;
+                    li{
+                       margin-bottom: 8px;
+                       &>div{
+                            align-items: center;
+                            display: flex;
+                            .circle{
+                                background-color: rgb(170, 170, 170);
+                                border-radius: 9999px;
+                                height: 32px;
+                                width: 32px;
+                            }
+                            .title{
+                                     flex: 1;
+                                     margin-left: 15px;
+                                     font-size: 150%;
+                                }
+                       }
+                       .description{
+                           margin-top: 15px;
+                           margin-left: 48px;
+                       }
+                    }
+            }
+            
+        }
     }
     .proyectos {
-        background-color: darkgrey;
+        background-color: lightgrey;
+        padding: 40px;
+        height: 100vh;
     }
 }
