@@ -3,9 +3,14 @@
   height: 100%;
   .sidenav {
     width: 200px;
-    background-color: rgb(63, 104, 105);
+    background-color: $base_color;
+    border-right: 2px solid $acento;
     .mat-toolbar {
       background: inherit;
+      &:mat-primary {
+        top: 0;
+        z-index: 1;
+      }
     }
     .menu {
       list-style: none;
@@ -21,14 +26,26 @@
           padding: 20px 0px;
           text-decoration: none;
           font-size: 120%;
-          color: whitesmoke;
-          font: {
+          background-color: $base_color;
+          color: $acento;
+          border-bottom: 2px solid;
+          border-color: $base_color;
+          width: 80%;
+          margin: 0 auto;
+          transition: .5s border-bottom;
+          &:hover {
+            border-color: $acento;
+          }
+          /* font: {
             size: 120%;
             family: $font_primary;
-          }
+          } */
         }
       }
     }
+  }
+  .mat-toolbar-row, .mat-toolbar-single-row {
+    height: 64px;
   }
 }
 
