@@ -7,23 +7,22 @@
     border-right: 2px solid $acento;
     .mat-toolbar {
       background: inherit;
-      &:mat-primary {
+      /* &:mat-primary {
         top: 0;
         z-index: 1;
-      }
+      } */
     }
     .menu {
       list-style: none;
       width: 100%;
       padding: {
         top: 60%;
-        left: 0%;
       }
       li {
         text-align: center;
         a {
           display: block;
-          padding: 20px 0px;
+          padding: 20px 0px 20px 0px;
           text-decoration: none;
           font-size: 120%;
           background-color: $base_color;

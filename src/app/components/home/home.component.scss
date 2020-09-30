@@ -25,18 +25,18 @@
             h2 {
                 font: {
                     size: 240%;
-                    family: $font_secundary;
-                }
-                color: white;
+                    family: $handlee;
+                    color: white;
+                }    
             }
             h1 {
                 font: {
                     size: 300%;
-                    family: $font_secundary;
+                    family: $handlee;
+                    color: white;
                 }
-                color: white;
             }
-            p {
+            .title {
                 font-size: 140%;
                 color: white;
             }
