@@ -25,6 +25,7 @@ export class MainNavComponent implements OnInit{
   navigateTo($event) {
     const element = document.querySelector($event.target.hash);
     element.scrollIntoView({ behavior: 'smooth' });
+    console.log(element);
   }
 
 }
